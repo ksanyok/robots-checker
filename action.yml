@@ -1,0 +1,16 @@
+name: "Robots.txt Checker by PromoPilot"
+description: "Validate robots.txt and fail if important URLs are blocked for a crawler."
+author: "Alexandr Krikun"
+branding:
+  icon: "shield"
+  color: "purple"
+inputs:
+  args:
+    description: "Arguments passed to the robots-checker CLI, e.g. \"example.com\""
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Run robots-checker
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/bin/cli.js" ${{ inputs.args }}

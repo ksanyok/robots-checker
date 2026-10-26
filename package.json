@@ -1,0 +1,55 @@
+{
+  "name": "@promopilot/robots-checker",
+  "version": "1.0.0",
+  "description": "Validate robots.txt from the command line and test whether URLs are allowed for Googlebot, Bingbot or any user agent, with RFC 9309 matching (wildcards, $, longest match). Flags SEO mistakes like blocked CSS/JS or Disallow: /. Zero-dependency Node.js CLI, library and GitHub Action. Free online version by PromoPilot.",
+  "keywords": [
+    "robots-txt",
+    "robots-checker",
+    "robots-txt-parser",
+    "seo",
+    "technical-seo",
+    "googlebot",
+    "crawler",
+    "web-crawler",
+    "rfc9309",
+    "seo-tools",
+    "cli",
+    "nodejs",
+    "github-action",
+    "promopilot"
+  ],
+  "homepage": "https://promopilot.link/en/tools/robots-checker.php?utm_source=github&utm_medium=repo&utm_campaign=tools&utm_content=robots-checker",
+  "bugs": {
+    "url": "https://github.com/ksanyok/robots-checker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksanyok/robots-checker.git"
+  },
+  "license": "MIT",
+  "author": "Alexandr Krikun (https://github.com/ksanyok)",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "robots-checker": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
